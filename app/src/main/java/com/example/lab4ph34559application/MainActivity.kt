@@ -30,94 +30,94 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AppNavigation()
+            //AppNavigation()
         }
     }
 }
 
-@Composable
-fun AppNavigation() {
-    val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "main") {
-        composable("main") { HomeScreen(navController) }
-        composable("example_one") { GetLayoutExampleOne() }
-        composable("example_two") { GetLayoutExampleTwo() }
-        composable("example_three") { GetLayoutExampleThree() }
-
-    }
-
-
-}
-
-@Composable
-fun HomeScreen(navController: NavController) {
-
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-
-        Button(
-            onClick = {
-                navController.navigate("example_one")
-            },
-            shape = RoundedCornerShape(10.dp),
-            modifier = Modifier
-                .width(150.dp)
-                .height(45.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Black
-            )
-
-        ) {
-            Text(
-                text = "Example 1", fontFamily = FontFamily.Serif
-            )
-        }
-        CommonSpacer()
-        Button(
-            onClick = {
-                navController.navigate("example_two")
-
-            },
-            shape = RoundedCornerShape(10.dp),
-            modifier = Modifier
-                .width(150.dp)
-                .height(45.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Black
-            )
-
-        ) {
-            Text(
-                text = "Example 2", fontFamily = FontFamily.Serif
-            )
-        }
-        CommonSpacer()
-        Button(
-            onClick = {
-                navController.navigate("example_three")
-
-                      },
-            shape = RoundedCornerShape(10.dp),
-            modifier = Modifier
-                .width(150.dp)
-                .height(45.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color.Black
-            )
-
-        ) {
-            Text(
-                text = "Example 3", fontFamily = FontFamily.Serif
-            )
-        }
-
-
-    }
-
-}
+//@Composable
+//fun AppNavigation() {
+//    val navController = rememberNavController()
+//    NavHost(navController = navController, startDestination = "main") {
+//        composable("main") { HomeScreen(navController) }
+//        composable("example_one") { GetLayoutExampleOne() }
+//        composable("example_two") { GetLayoutExampleTwo() }
+//        composable("example_three") { GetLayoutExampleThree() }
+//
+//    }
+//
+//
+//}
+//
+//@Composable
+//fun HomeScreen(navController: NavController) {
+//
+//    Column(
+//        modifier = Modifier.fillMaxSize(),
+//        horizontalAlignment = Alignment.CenterHorizontally,
+//        verticalArrangement = Arrangement.Center
+//    ) {
+//
+//        Button(
+//            onClick = {
+//                navController.navigate("example_one")
+//            },
+//            shape = RoundedCornerShape(10.dp),
+//            modifier = Modifier
+//                .width(150.dp)
+//                .height(45.dp),
+//            colors = ButtonDefaults.buttonColors(
+//                containerColor = Color.Black
+//            )
+//
+//        ) {
+//            Text(
+//                text = "Example 1", fontFamily = FontFamily.Serif
+//            )
+//        }
+//        CommonSpacer()
+//        Button(
+//            onClick = {
+//                navController.navigate("example_two")
+//
+//            },
+//            shape = RoundedCornerShape(10.dp),
+//            modifier = Modifier
+//                .width(150.dp)
+//                .height(45.dp),
+//            colors = ButtonDefaults.buttonColors(
+//                containerColor = Color.Black
+//            )
+//
+//        ) {
+//            Text(
+//                text = "Example 2", fontFamily = FontFamily.Serif
+//            )
+//        }
+//        CommonSpacer()
+//        Button(
+//            onClick = {
+//                navController.navigate("example_three")
+//
+//                      },
+//            shape = RoundedCornerShape(10.dp),
+//            modifier = Modifier
+//                .width(150.dp)
+//                .height(45.dp),
+//            colors = ButtonDefaults.buttonColors(
+//                containerColor = Color.Black
+//            )
+//
+//        ) {
+//            Text(
+//                text = "Example 3", fontFamily = FontFamily.Serif
+//            )
+//        }
+//
+//
+//    }
+//
+//}
 
 @Composable
 fun CommonSpacer() {
@@ -128,6 +128,6 @@ fun CommonSpacer() {
 @Composable
 fun GreetingPreview() {
 
-    AppNavigation()
+    //AppNavigation()
 
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Lab4PH34559Application</string>
+    <string name="title_activity_home_screen">HomeScreenActivity</string>
 </resources>

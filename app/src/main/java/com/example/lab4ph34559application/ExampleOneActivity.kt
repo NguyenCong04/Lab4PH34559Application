@@ -1,5 +1,6 @@
 package com.example.lab4ph34559application
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -113,16 +114,25 @@ fun GetLayoutExampleOne() {
         Spacer(modifier = Modifier.height(20.dp))
         Button(
             onClick = {
-                if (username.isNotBlank() && password.isNotBlank()) Toast
-                    .makeText(context, "Login successfully", Toast.LENGTH_SHORT)
-                    .show()
-                else Toast
-                    .makeText(
-                        context,
-                        "Please enter you username and password",
-                        Toast.LENGTH_SHORT
-                    )
-                    .show()
+                if (username.isNotBlank() && password.isNotBlank()) {
+                    Toast
+                        .makeText(context, "Login successfully", Toast.LENGTH_SHORT)
+                        .show()
+                    val intent = Intent(context, HomeScreenActivity::class.java)
+                    val objNv = StudentModel("Nguyen", 8, username, password)
+                    intent.putExtra("username", username)
+                    intent.putExtra("obj", objNv)
+                    context.startActivity(intent)
+
+                } else {
+                    Toast
+                        .makeText(
+                            context,
+                            "Please enter you username and password",
+                            Toast.LENGTH_SHORT
+                        )
+                        .show()
+                }
             },
             modifier = Modifier.width(200.dp),
             shape = RoundedCornerShape(8.dp),

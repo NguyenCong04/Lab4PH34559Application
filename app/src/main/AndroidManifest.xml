@@ -13,16 +13,21 @@
         android:theme="@style/Theme.Lab4PH34559Application"
         tools:targetApi="31">
         <activity
+            android:name=".HomeScreenActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.Lab4PH34559Application" />
+        <activity
             android:name=".ExampleThreeActivity"
             android:exported="false" />
         <activity
             android:name=".ExampleTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".ExampleOneActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ExampleOneActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Lab4PH34559Application">
